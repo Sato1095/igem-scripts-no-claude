@@ -1,0 +1,112 @@
+{
+  "script_version": "2.0",
+  "run_utc": "2026-10-10T15:36:25Z",
+  "argv": [
+    "--anchors",
+    "KRAS",
+    "MDM2",
+    "--sinks",
+    "CASP3",
+    "CASP7",
+    "PARP1",
+    "CDKN1A",
+    "--nodes",
+    "model_scope_v1.txt",
+    "--min-resources",
+    "2",
+    "--min-references",
+    "1",
+    "--min-curation-effort",
+    "5",
+    "--terminal-sinks",
+    "--decisions",
+    "decisions_final.csv",
+    "--cache",
+    "run01/raw",
+    "-d",
+    "final"
+  ],
+  "parameters": {
+    "anchors": [
+      "KRAS",
+      "MDM2"
+    ],
+    "dir": "final",
+    "cache": "run01/raw",
+    "refresh": false,
+    "datasets": "omnipath,kinaseextra,pathwayextra,collectri",
+    "organism": "9606",
+    "min_resources": 2,
+    "min_references": 1,
+    "keep_undirected": false,
+    "min_curation_effort": 5,
+    "hops": 2,
+    "hub_degree": 250,
+    "cutoff": 6,
+    "phenotype_re": "apopto|cell[_ ]cycle[_ ]arrest|p53",
+    "annotation_resources": "MSigDB,CancerSEA,SIGNOR",
+    "exclude_ptm_resources": "ProtMapper|Sparser|RLIMS|REACH|TRIPS|BEL-Large-Corpus|Medscan|EVEX",
+    "terminal_sinks": true,
+    "nodes": "model_scope_v1.txt",
+    "suggest": 40,
+    "suggest_min_links": 3,
+    "list_terms": null,
+    "phenotype_field": "value",
+    "dump_vocabulary": 25,
+    "sinks": [
+      "CASP3",
+      "CASP7",
+      "PARP1",
+      "CDKN1A"
+    ],
+    "expression": null,
+    "expression_min": 1.0,
+    "decisions": "decisions_final.csv",
+    "allow_manual_edges": false,
+    "interactions_tsv": null,
+    "enzsub_tsv": null,
+    "annotations_tsv": null
+  },
+  "inputs": [
+    {
+      "path": "/mnt/c/Users/dimko/OneDrive/\u03a5\u03c0\u03bf\u03bb\u03bf\u03b3\u03b9\u03c3\u03c4\u03ae\u03c2/Model 2 Test/run01/raw/interactions_b213ab001413.tsv",
+      "sha256": "cc164c17dba935541e0da4a6edc50109809c744afb11684a8ff14614e83ea228"
+    },
+    {
+      "path": "/mnt/c/Users/dimko/OneDrive/\u03a5\u03c0\u03bf\u03bb\u03bf\u03b3\u03b9\u03c3\u03c4\u03ae\u03c2/Model 2 Test/run01/raw/enzsub_7c85fe18bf44.tsv",
+      "sha256": "aaf3d19489675da93eda0ba33be6291d17603cabf9fe68ef94f6d1245e25cefa"
+    },
+    {
+      "path": "/mnt/c/Users/dimko/OneDrive/\u03a5\u03c0\u03bf\u03bb\u03bf\u03b3\u03b9\u03c3\u03c4\u03ae\u03c2/Model 2 Test/model_scope_v1.txt",
+      "sha256": "de1bc39496de6b576316d6dc809ae1bcb9ec404f67c9cca8e8df12f0ab04a8ed"
+    }
+  ],
+  "counts": {
+    "interactions_fetched": 203001,
+    "edges_qualified": 28146,
+    "edges_rejected": 173610,
+    "scope_nodes": 31,
+    "scope_absent": 0,
+    "edges_final": 117,
+    "edges_needing_review": 0,
+    "suggestions": 40,
+    "manual_decisions_applied": 25,
+    "manual_decisions_refused": 0
+  },
+  "terminal_sink_edges_removed": [
+    "CASP3->AKT1",
+    "CASP3->APAF1",
+    "CASP3->CASP9",
+    "CASP3->CDKN1A",
+    "CASP3->MDM2",
+    "CASP3->PARP1",
+    "CASP3->XIAP",
+    "CASP7->PARP1",
+    "CDKN1A->CASP3",
+    "CDKN1A->RAF1",
+    "CDKN1A->TP53",
+    "PARP1->TP53"
+  ],
+  "mode": "scope",
+  "manual_decisions_refused": []
+}
