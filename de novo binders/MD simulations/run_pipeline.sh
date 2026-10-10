@@ -2,11 +2,11 @@
 # =============================================================================
 # run_pipeline.sh
 #
-# GROMACS 100 ns MD pipeline -- CHARMM36 / cubic box / TIP3P / Cl- only
+# GROMACS 100 ns MD pipeline -- FF / cubic box / TIP3P / Cl- only
 # Protocol based on: doi:10.1186/s43088-026-00765-8 (100 ns instead of 300 ns)
 #
 # USAGE (run from the folder containing your PDB):
-#   bash run_pipeline.sh PMI-MDM2.pdb
+#   bash run_pipeline.sh example.pdb
 #
 # Preprocessing runs here directly (<1 min), then em -> nvt -> npt -> md
 # are submitted as a SLURM dependency chain. Log off after submission.
@@ -45,7 +45,7 @@ module load $GMX_MODULES
 # Three key differences from AMBER/OPLS setups:
 #   1. rcoulomb = rvdw = 1.2 nm  (not 1.0)
 #   2. vdwtype = Cut-off  +  vdw-modifier = Force-switch  +  rvdw-switch = 1.0
-#   3. NO DispCorr -- CHARMM36 was parameterized without dispersion correction
+#   3. NO DispCorr 
 # ---------------------------------------------------------------------------
 cat > ions.mdp << 'EOF'
 ; ions.mdp 
