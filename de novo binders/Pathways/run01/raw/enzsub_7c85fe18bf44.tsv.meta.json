@@ -1,0 +1,13 @@
+{
+  "url": "https://omnipathdb.org/enzsub?fields=sources%2Creferences%2Ccuration_effort&format=tsv&genesymbols=yes&organisms=9606",
+  "endpoint": "enzsub",
+  "params": {
+    "genesymbols": "yes",
+    "organisms": "9606",
+    "format": "tsv",
+    "fields": "sources,references,curation_effort"
+  },
+  "fetched_utc": "2026-09-17T19:34:15Z",
+  "bytes": 5058512,
+  "sha256": "aaf3d19489675da93eda0ba33be6291d17603cabf9fe68ef94f6d1245e25cefa"
+}
