@@ -1,0 +1,45 @@
+# Declared scope for the KRAS / MDM2 -> apoptosis Boolean model (A549)
+# One HGNC symbol per line. This file is the model's stated boundary:
+# it is a reviewable modelling decision, not a curation shortcut.
+# Edges and signs among these nodes are fetched from OmniPath, never asserted here.
+
+# --- MAPK arm ---
+KRAS
+RAF1
+MAP2K1
+MAPK1
+MAPK3
+
+# --- PI3K / AKT arm ---
+PIK3CA
+PIK3R1
+PTEN
+AKT1
+FOXO3
+GSK3B
+
+# --- p53 module ---
+TP53
+MDM2
+MDM4
+CDKN1A
+
+# --- BCL-2 family ---
+BBC3
+PMAIP1
+BCL2L11
+BAD
+MCL1
+BCL2L1
+BAX
+BAK1
+
+# --- execution ---
+CYCS
+DIABLO
+APAF1
+CASP9
+CASP3
+CASP7
+XIAP
+PARP1
