@@ -1,0 +1,174 @@
+Node AKT1 {
+  logic = PI3K AND NOT (TP53 OR PTEN);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node APAF1 {
+  logic = (TP53 OR CYCS) AND NOT BCL2L1;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node BAD {
+  logic = NOT (AKT1 OR RAF1);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node BAK1 {
+  logic = NOT (BCL2L1 OR MCL1);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node BAX {
+  logic = (TP53 OR BCL2L11 OR GSK3B OR BBC3) AND NOT (BCL2L1 OR MCL1 OR AKT1);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node BBC3 {
+  logic = TP53 OR FOXO3;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node BCL2L1 {
+  logic = NOT (BAD OR BCL2L11 OR BBC3 OR PMAIP1 OR TP53);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node BCL2L11 {
+  logic = (FOXO3 OR TP53) AND NOT (MAPK3 OR MAPK1 OR AKT1);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node CASP3 {
+  logic = CASP9 AND NOT XIAP;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node CASP7 {
+  logic = CASP9 AND NOT XIAP;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node CASP9 {
+  logic = CYCS AND APAF1 AND NOT (XIAP OR MAPK1 OR MAPK3 OR AKT1 OR MAP2K1 OR BCL2L1);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node CDKN1A {
+  logic = (TP53 OR FOXO3) AND NOT (GSK3B OR MDM2 OR MAPK1);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node CYCS {
+  logic = (BAX OR BAK1);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node DIABLO {
+  logic = (BAK1 OR BAX) AND NOT XIAP;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node FOXO3 {
+  logic = NOT (AKT1 OR MAPK1);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node GSK3B {
+  logic = NOT (AKT1 OR MAPK1 OR MAPK3);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node KRAS {
+  logic = KRAS;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node MAP2K1 {
+  logic = RAF1;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node MAPK1 {
+  logic = MAP2K1;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node MAPK3 {
+  logic = MAP2K1;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node MCL1 {
+  logic = (MAPK1 OR MAPK3) AND NOT (BCL2L11 OR GSK3B OR PMAIP1 OR TP53 OR BBC3);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node MDM2 {
+  logic = MDM2;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node MDM4 {
+  logic = MDM4;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node PI3K {
+  logic = KRAS AND NOT (TP53 OR PTEN);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node PMAIP1 {
+  logic = TP53;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node PTEN {
+  logic = TP53 AND NOT (GSK3B OR AKT1);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node RAF1 {
+  logic = KRAS;
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node TP53 {
+  logic = NOT (MDM2 AND MDM4);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
+Node XIAP {
+  logic = (AKT1 OR RAF1) AND NOT (DIABLO OR TP53);
+  rate_up = @logic ? 1 : 0;
+  rate_down = @logic ? 0 : 1;
+}
+
